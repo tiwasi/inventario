@@ -15,30 +15,30 @@ import javax.validation.constraints.NotNull;
  * @author lio
  */
 @Embeddable
-public class DetallesalidadPK implements Serializable {
+public class DetallesalidaPK implements Serializable {
     @Basic(optional = false)
     @NotNull
-    @Column(name = "idSalidad", nullable = false)
-    private int idSalidad;
+    @Column(name = "idSalida", nullable = false)
+    private int idSalida;
     @Basic(optional = false)
     @NotNull
     @Column(name = "idProducto", nullable = false)
     private int idProducto;
 
-    public DetallesalidadPK() {
+    public DetallesalidaPK() {
     }
 
-    public DetallesalidadPK(int idSalidad, int idProducto) {
-        this.idSalidad = idSalidad;
+    public DetallesalidaPK(int idSalida, int idProducto) {
+        this.idSalida = idSalida;
         this.idProducto = idProducto;
     }
 
-    public int getIdSalidad() {
-        return idSalidad;
+    public int getIdSalida() {
+        return idSalida;
     }
 
-    public void setIdSalidad(int idSalidad) {
-        this.idSalidad = idSalidad;
+    public void setIdSalida(int idSalida) {
+        this.idSalida = idSalida;
     }
 
     public int getIdProducto() {
@@ -52,7 +52,7 @@ public class DetallesalidadPK implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) idSalidad;
+        hash += (int) idSalida;
         hash += (int) idProducto;
         return hash;
     }
@@ -60,11 +60,11 @@ public class DetallesalidadPK implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof DetallesalidadPK)) {
+        if (!(object instanceof DetallesalidaPK)) {
             return false;
         }
-        DetallesalidadPK other = (DetallesalidadPK) object;
-        if (this.idSalidad != other.idSalidad) {
+        DetallesalidaPK other = (DetallesalidaPK) object;
+        if (this.idSalida != other.idSalida) {
             return false;
         }
         if (this.idProducto != other.idProducto) {
@@ -75,7 +75,7 @@ public class DetallesalidadPK implements Serializable {
 
     @Override
     public String toString() {
-        return "com.inventario.entidades.DetallesalidadPK[ idSalidad=" + idSalidad + ", idProducto=" + idProducto + " ]";
+        return "com.inventario.entidades.DetallesalidadPK[ idSalida=" + idSalida + ", idProducto=" + idProducto + " ]";
     }
     
 }

@@ -54,7 +54,7 @@ public class Ordensalida implements Serializable {
     @Column(name = "Aprobado")
     private Boolean aprobado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idOrdenSalida")
-    private List<Salidad> salidadList;
+    private List<Salida> salidadList;
     @JoinColumn(name = "idSolicitud", referencedColumnName = "idSolicitud", nullable = false)
     @ManyToOne(optional = false)
     private Solicitud idSolicitud;
@@ -99,11 +99,11 @@ public class Ordensalida implements Serializable {
     }
 
     @XmlTransient
-    public List<Salidad> getSalidadList() {
+    public List<Salida> getSalidadList() {
         return salidadList;
     }
 
-    public void setSalidadList(List<Salidad> salidadList) {
+    public void setSalidadList(List<Salida> salidadList) {
         this.salidadList = salidadList;
     }
 

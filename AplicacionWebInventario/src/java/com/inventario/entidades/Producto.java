@@ -71,7 +71,7 @@ public class Producto implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<Inventario> inventarioList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
-    private List<Detallesalidad> detallesalidadList;
+    private List<Detallesalida> detallesalidadList;
     @JoinColumn(name = "idCategoria", referencedColumnName = "idCategoria", nullable = false)
     @ManyToOne(optional = false)
     private Categoria idCategoria;
@@ -172,11 +172,11 @@ public class Producto implements Serializable {
     }
 
     @XmlTransient
-    public List<Detallesalidad> getDetallesalidadList() {
+    public List<Detallesalida> getDetallesalidadList() {
         return detallesalidadList;
     }
 
-    public void setDetallesalidadList(List<Detallesalidad> detallesalidadList) {
+    public void setDetallesalidadList(List<Detallesalida> detallesalidadList) {
         this.detallesalidadList = detallesalidadList;
     }
 

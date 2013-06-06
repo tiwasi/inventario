@@ -51,7 +51,7 @@ public class Solicitud implements Serializable {
     @Column(name = "MontoTotal", precision = 22)
     private Double montoTotal;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "solicitud")
-    private List<Detallesolicitud> detallesolicitudList;
+    private List<DetalleSolicitud> detallesolicitudList;
     @JoinColumn(name = "idTipoSolicitud", referencedColumnName = "idTipoSolicitud", nullable = false)
     @ManyToOne(optional = false)
     private Tiposolicitud idTipoSolicitud;
@@ -59,9 +59,9 @@ public class Solicitud implements Serializable {
     @ManyToOne(optional = false)
     private Personal idPersonal;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idSolicitud")
-    private List<Ordencompra> ordencompraList;
+    private List<OrdenCompra> ordencompraList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idSolicitud")
-    private List<Ordensalida> ordensalidaList;
+    private List<OrdenSalida> ordensalidaList;
 
     public Solicitud() {
     }
@@ -95,11 +95,11 @@ public class Solicitud implements Serializable {
     }
 
     @XmlTransient
-    public List<Detallesolicitud> getDetallesolicitudList() {
+    public List<DetalleSolicitud> getDetallesolicitudList() {
         return detallesolicitudList;
     }
 
-    public void setDetallesolicitudList(List<Detallesolicitud> detallesolicitudList) {
+    public void setDetallesolicitudList(List<DetalleSolicitud> detallesolicitudList) {
         this.detallesolicitudList = detallesolicitudList;
     }
 
@@ -120,20 +120,20 @@ public class Solicitud implements Serializable {
     }
 
     @XmlTransient
-    public List<Ordencompra> getOrdencompraList() {
+    public List<OrdenCompra> getOrdencompraList() {
         return ordencompraList;
     }
 
-    public void setOrdencompraList(List<Ordencompra> ordencompraList) {
+    public void setOrdencompraList(List<OrdenCompra> ordencompraList) {
         this.ordencompraList = ordencompraList;
     }
 
     @XmlTransient
-    public List<Ordensalida> getOrdensalidaList() {
+    public List<OrdenSalida> getOrdensalidaList() {
         return ordensalidaList;
     }
 
-    public void setOrdensalidaList(List<Ordensalida> ordensalidaList) {
+    public void setOrdensalidaList(List<OrdenSalida> ordensalidaList) {
         this.ordensalidaList = ordensalidaList;
     }
 

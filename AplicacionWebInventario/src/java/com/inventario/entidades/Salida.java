@@ -41,9 +41,9 @@ public class Salida implements Serializable {
     private Integer idSalida;
     @JoinColumn(name = "idOrdenSalida", referencedColumnName = "idOrdenSalida", nullable = false)
     @ManyToOne(optional = false)
-    private Ordensalida idOrdenSalida;
+    private OrdenSalida idOrdenSalida;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "salida")
-    private List<Detallesalida> detallesalidaList;
+    private List<DetalleSalida> detallesalidaList;
 
     public Salida() {
     }
@@ -60,20 +60,20 @@ public class Salida implements Serializable {
         this.idSalida = idSalida;
     }
 
-    public Ordensalida getIdOrdenSalida() {
+    public OrdenSalida getIdOrdenSalida() {
         return idOrdenSalida;
     }
 
-    public void setIdOrdenSalida(Ordensalida idOrdenSalida) {
+    public void setIdOrdenSalida(OrdenSalida idOrdenSalida) {
         this.idOrdenSalida = idOrdenSalida;
     }
 
     @XmlTransient
-    public List<Detallesalida> getDetallesalidaList() {
+    public List<DetalleSalida> getDetallesalidaList() {
         return detallesalidaList;
     }
 
-    public void setDetallesalidaList(List<Detallesalida> detallesalidaList) {
+    public void setDetallesalidaList(List<DetalleSalida> detallesalidaList) {
         this.detallesalidaList = detallesalidaList;
     }
 

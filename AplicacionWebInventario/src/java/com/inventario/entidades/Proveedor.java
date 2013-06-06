@@ -38,7 +38,7 @@ public class Proveedor implements Serializable {
     @Column(name = "idProveedor", nullable = false)
     private Integer idProveedor;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProveedor")
-    private List<Ordencompra> ordencompraList;
+    private List<OrdenCompra> ordencompraList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProveedor")
     private List<Producto> productoList;
 
@@ -58,11 +58,11 @@ public class Proveedor implements Serializable {
     }
 
     @XmlTransient
-    public List<Ordencompra> getOrdencompraList() {
+    public List<OrdenCompra> getOrdencompraList() {
         return ordencompraList;
     }
 
-    public void setOrdencompraList(List<Ordencompra> ordencompraList) {
+    public void setOrdencompraList(List<OrdenCompra> ordencompraList) {
         this.ordencompraList = ordencompraList;
     }
 

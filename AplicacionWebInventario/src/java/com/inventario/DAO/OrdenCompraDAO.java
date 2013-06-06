@@ -4,7 +4,7 @@
  */
 package com.inventario.DAO;
 
-import com.inventario.entidades.Ordencompra;
+import com.inventario.entidades.OrdenCompra;
 import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class OrdenCompraDAO extends HibernateDaoSupport{
 
     public OrdenCompraDAO() {
     }
-    public boolean insertarOrdencompra(Ordencompra ordencompra){
+    public boolean insertarOrdencompra(OrdenCompra ordencompra){
         try {
             getHibernateTemplate().save(ordencompra);
             //getHibernateTemplate().saveOrUpdate(ordencompra);
@@ -36,7 +36,7 @@ public class OrdenCompraDAO extends HibernateDaoSupport{
         }
         return false;
     }
-    public boolean actualizarOrdencompra(Ordencompra ordencompra){
+    public boolean actualizarOrdencompra(OrdenCompra ordencompra){
         try {
             getHibernateTemplate().update(ordencompra);
            // getHibernateTemplate().saveOrUpdate(ordencompra);
@@ -47,16 +47,16 @@ public class OrdenCompraDAO extends HibernateDaoSupport{
         }
         return false;
     }
-    public Ordencompra buscarOrdencompra(int id){
+    public OrdenCompra buscarOrdencompra(int id){
         try {
-            return getHibernateTemplate().get(Ordencompra.class, id);
+            return getHibernateTemplate().get(OrdenCompra.class, id);
         } catch (DataAccessException e) {
             //JOptionPane.showMessageDialog(null, e.getMessage(), "Error al insertar ordencompra", JOptionPane.ERROR_MESSAGE);
             System.out.println("Error al buscar en el DAO :" +e.getMessage());
         }
         return null;
     }
-    public boolean eliminarOrdencompra(Ordencompra ordencompra){
+    public boolean eliminarOrdencompra(OrdenCompra ordencompra){
         try {
             getHibernateTemplate().delete(ordencompra);
             return true;
@@ -67,8 +67,8 @@ public class OrdenCompraDAO extends HibernateDaoSupport{
         return false;
     }
     @SuppressWarnings("unchecked")
-    public List<Ordencompra> listarOrdencompras(){
-        List<Ordencompra> lista=null;
+    public List<OrdenCompra> listarOrdencompras(){
+        List<OrdenCompra> lista=null;
         try {
             lista= getHibernateTemplate().findByNamedQuery("Ordencompra.findAll");
         } catch (DataAccessException e) {

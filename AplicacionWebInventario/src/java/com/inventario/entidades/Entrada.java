@@ -62,13 +62,13 @@ public class Entrada implements Serializable {
     @Column(name = "TipoPago", length = 20)
     private String tipoPago;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "entrada")
-    private List<Detalleentrada> detalleentradaList;
+    private List<DetalleEntrada> detalleentradaList;
     @JoinColumn(name = "idAlmacen", referencedColumnName = "idAlmacen", nullable = false)
     @ManyToOne(optional = false)
     private Almacen idAlmacen;
     @JoinColumn(name = "idOrdenCompra", referencedColumnName = "idOrdenCompra", nullable = false)
     @ManyToOne(optional = false)
-    private Ordencompra idOrdenCompra;
+    private OrdenCompra idOrdenCompra;
 
     public Entrada() {
     }
@@ -126,11 +126,11 @@ public class Entrada implements Serializable {
     }
 
     @XmlTransient
-    public List<Detalleentrada> getDetalleentradaList() {
+    public List<DetalleEntrada> getDetalleentradaList() {
         return detalleentradaList;
     }
 
-    public void setDetalleentradaList(List<Detalleentrada> detalleentradaList) {
+    public void setDetalleentradaList(List<DetalleEntrada> detalleentradaList) {
         this.detalleentradaList = detalleentradaList;
     }
 
@@ -142,11 +142,11 @@ public class Entrada implements Serializable {
         this.idAlmacen = idAlmacen;
     }
 
-    public Ordencompra getIdOrdenCompra() {
+    public OrdenCompra getIdOrdenCompra() {
         return idOrdenCompra;
     }
 
-    public void setIdOrdenCompra(Ordencompra idOrdenCompra) {
+    public void setIdOrdenCompra(OrdenCompra idOrdenCompra) {
         this.idOrdenCompra = idOrdenCompra;
     }
 

@@ -66,7 +66,7 @@ public class Ventas implements Serializable {
     @ManyToOne(optional = false)
     private Cliente idCliente;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ventas")
-    private List<Detalleventa> detalleventaList;
+    private List<DetalleVenta> detalleventaList;
 
     public Ventas() {
     }
@@ -132,11 +132,11 @@ public class Ventas implements Serializable {
     }
 
     @XmlTransient
-    public List<Detalleventa> getDetalleventaList() {
+    public List<DetalleVenta> getDetalleventaList() {
         return detalleventaList;
     }
 
-    public void setDetalleventaList(List<Detalleventa> detalleventaList) {
+    public void setDetalleventaList(List<DetalleVenta> detalleventaList) {
         this.detalleventaList = detalleventaList;
     }
 

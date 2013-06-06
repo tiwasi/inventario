@@ -5,7 +5,7 @@
 package com.inventario.servicios;
 
 import com.inventario.DAO.OrdenCompraDAO;
-import com.inventario.entidades.Ordencompra;
+import com.inventario.entidades.OrdenCompra;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,23 +19,23 @@ public class ServicioOrdenCompra {
     @Autowired
     OrdenCompraDAO ordenCompraDAO;
 
-    public boolean insertarOrdencompra(Ordencompra ordencompra) {
+    public boolean insertarOrdencompra(OrdenCompra ordencompra) {
         return ordenCompraDAO.insertarOrdencompra(ordencompra);
     }
 
-    public boolean actualizarOrdencompra(Ordencompra ordencompra) {
+    public boolean actualizarOrdencompra(OrdenCompra ordencompra) {
         return ordenCompraDAO.actualizarOrdencompra(ordencompra);
     }
 
-    public Ordencompra buscarOrdencompra(int id) {
+    public OrdenCompra buscarOrdencompra(int id) {
         return ordenCompraDAO.buscarOrdencompra(id);
     }
 
-    public boolean eliminarOrdencompra(Ordencompra ordencompra) {
+    public boolean eliminarOrdencompra(OrdenCompra ordencompra) {
         return ordenCompraDAO.eliminarOrdencompra(ordencompra);
     }
 
-    public List<Ordencompra> listarOrdencompras() {
+    public List<OrdenCompra> listarOrdencompras() {
         return ordenCompraDAO.listarOrdencompras();
     }
     

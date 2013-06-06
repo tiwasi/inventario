@@ -5,7 +5,7 @@
 package com.inventario.servicios;
 
 import com.inventario.DAO.DetalleSolicitudDAO;
-import com.inventario.entidades.Detallesolicitud;
+import com.inventario.entidades.DetalleSolicitud;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,25 +19,26 @@ public class ServicioDetalleSolicitud {
     @Autowired
     DetalleSolicitudDAO detalleSolicitudDAO;
 
-    public boolean insertarDetallesolicitud(Detallesolicitud detallesolicitud) {
-        return detalleSolicitudDAO.insertarDetallesolicitud(detallesolicitud);
+    public boolean insertarDetalleSolicitud(DetalleSolicitud detalleSolicitud) {
+        return detalleSolicitudDAO.insertarDetalleSolicitud(detalleSolicitud);
     }
 
-    public boolean actualizarDetallesolicitud(Detallesolicitud detallesolicitud) {
-        return detalleSolicitudDAO.actualizarDetallesolicitud(detallesolicitud);
+    public boolean actualizarDetalleSolicitud(DetalleSolicitud detalleSolicitud) {
+        return detalleSolicitudDAO.actualizarDetalleSolicitud(detalleSolicitud);
     }
 
-    public Detallesolicitud buscarDetallesolicitud(int id) {
-        return detalleSolicitudDAO.buscarDetallesolicitud(id);
+    public DetalleSolicitud buscarDetalleSolicitud(int id) {
+        return detalleSolicitudDAO.buscarDetalleSolicitud(id);
     }
 
-    public boolean eliminarDetallesolicitud(Detallesolicitud detallesolicitud) {
-        return detalleSolicitudDAO.eliminarDetallesolicitud(detallesolicitud);
+    public boolean eliminarDetalleSolicitud(DetalleSolicitud detalleSolicitud) {
+        return detalleSolicitudDAO.eliminarDetalleSolicitud(detalleSolicitud);
     }
 
-    public List<Detallesolicitud> listarDetallesolicituds() {
-        return detalleSolicitudDAO.listarDetallesolicituds();
+    public List<DetalleSolicitud> listarDetalleSolicituds() {
+        return detalleSolicitudDAO.listarDetalleSolicituds();
     }
+
     
     
 }

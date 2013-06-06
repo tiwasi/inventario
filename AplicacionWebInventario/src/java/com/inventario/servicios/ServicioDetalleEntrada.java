@@ -5,7 +5,7 @@
 package com.inventario.servicios;
 
 import com.inventario.DAO.DetalleEntradaDAO;
-import com.inventario.entidades.Detalleentrada;
+import com.inventario.entidades.DetalleEntrada;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,24 +19,26 @@ public class ServicioDetalleEntrada {
     @Autowired
     DetalleEntradaDAO detalleEntradaDAO;
 
-    public boolean insertarDetalleentrada(Detalleentrada dedao) {
-        return detalleEntradaDAO.insertarDetalleentrada(dedao);
+    public boolean insertarDetalleEntrada(DetalleEntrada detalleEntrada) {
+        return detalleEntradaDAO.insertarDetalleEntrada(detalleEntrada);
     }
 
-    public boolean actualizarDetalleentrada(Detalleentrada dedao) {
-        return detalleEntradaDAO.actualizarDetalleentrada(dedao);
+    public boolean actualizarDetalleEntrada(DetalleEntrada detalleEntrada) {
+        return detalleEntradaDAO.actualizarDetalleEntrada(detalleEntrada);
     }
 
-    public Detalleentrada buscarDetalleentrada(int id) {
-        return detalleEntradaDAO.buscarDetalleentrada(id);
+    public DetalleEntrada buscarDetalleEntrada(int id) {
+        return detalleEntradaDAO.buscarDetalleEntrada(id);
     }
 
-    public boolean eliminarDetalleentrada(Detalleentrada dedao) {
-        return detalleEntradaDAO.eliminarDetalleentrada(dedao);
+    public boolean eliminarDetalleEntrada(DetalleEntrada detalleEntrada) {
+        return detalleEntradaDAO.eliminarDetalleEntrada(detalleEntrada);
     }
 
-    public List<Detalleentrada> listarDetalleentradas() {
-        return detalleEntradaDAO.listarDetalleentradas();
+    public List<DetalleEntrada> listarDetalleEntradas() {
+        return detalleEntradaDAO.listarDetalleEntradas();
     }
+
+   
     
 }

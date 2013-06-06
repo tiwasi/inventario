@@ -5,7 +5,7 @@
 package com.inventario.servicios;
 
 import com.inventario.DAO.OrdenSalidaDAO;
-import com.inventario.entidades.Ordensalida;
+import com.inventario.entidades.OrdenSalida;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,25 +19,25 @@ public class ServicioOrdenSalida {
     @Autowired
     OrdenSalidaDAO ordenSalidaDAO;
 
-    public boolean insertarOrdensalida(Ordensalida ordenSalida) {
-        return ordenSalidaDAO.insertarOrdensalida(ordenSalida);
+    public boolean insertarOrdenSalida(OrdenSalida detalleVenta) {
+        return ordenSalidaDAO.insertarOrdenSalida(detalleVenta);
     }
 
-    public boolean actualizarOrdensalida(Ordensalida ordenSalida) {
-        return ordenSalidaDAO.actualizarOrdensalida(ordenSalida);
+    public boolean actualizarOrdenSalida(OrdenSalida detalleVenta) {
+        return ordenSalidaDAO.actualizarOrdenSalida(detalleVenta);
     }
 
-    public Ordensalida buscarOrdensalida(int id) {
-        return ordenSalidaDAO.buscarOrdensalida(id);
+    public OrdenSalida buscarOrdenSalida(int id) {
+        return ordenSalidaDAO.buscarOrdenSalida(id);
     }
 
-    public boolean eliminarOrdensalida(Ordensalida ordenSalida) {
-        return ordenSalidaDAO.eliminarOrdensalida(ordenSalida);
+    public boolean eliminarOrdenSalida(OrdenSalida detalleVenta) {
+        return ordenSalidaDAO.eliminarOrdenSalida(detalleVenta);
     }
 
-    public List<Ordensalida> listarOrdensalidas() {
-        return ordenSalidaDAO.listarOrdensalidas();
+    public List<OrdenSalida> listarOrdenSalidas() {
+        return ordenSalidaDAO.listarOrdenSalidas();
     }
-    
+
     
 }

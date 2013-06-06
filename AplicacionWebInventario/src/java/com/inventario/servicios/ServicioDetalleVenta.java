@@ -5,7 +5,7 @@
 package com.inventario.servicios;
 
 import com.inventario.DAO.DetalleVentaDAO;
-import com.inventario.entidades.Detalleventa;
+import com.inventario.entidades.DetalleVenta;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,24 +19,26 @@ public class ServicioDetalleVenta {
     @Autowired
     DetalleVentaDAO detalleVentaDAO;
 
-    public boolean insertarDetalleventa(Detalleventa detalleventa) {
-        return detalleVentaDAO.insertarDetalleventa(detalleventa);
+    public boolean insertarDetalleVenta(DetalleVenta detalleVenta) {
+        return detalleVentaDAO.insertarDetalleVenta(detalleVenta);
     }
 
-    public boolean actualizarDetalleventa(Detalleventa detalleventa) {
-        return detalleVentaDAO.actualizarDetalleventa(detalleventa);
+    public boolean actualizarDetalleVenta(DetalleVenta detalleVenta) {
+        return detalleVentaDAO.actualizarDetalleVenta(detalleVenta);
     }
 
-    public Detalleventa buscarDetalleventa(int id) {
-        return detalleVentaDAO.buscarDetalleventa(id);
+    public DetalleVenta buscarDetalleVenta(int id) {
+        return detalleVentaDAO.buscarDetalleVenta(id);
     }
 
-    public boolean eliminarDetalleventa(Detalleventa detalleventa) {
-        return detalleVentaDAO.eliminarDetalleventa(detalleventa);
+    public boolean eliminarDetalleVenta(DetalleVenta detalleVenta) {
+        return detalleVentaDAO.eliminarDetalleVenta(detalleVenta);
     }
 
-    public List<Detalleventa> listarDetalleventas() {
-        return detalleVentaDAO.listarDetalleventas();
+    public List<DetalleVenta> listarDetalleVentas() {
+        return detalleVentaDAO.listarDetalleVentas();
     }
+
+    
     
 }

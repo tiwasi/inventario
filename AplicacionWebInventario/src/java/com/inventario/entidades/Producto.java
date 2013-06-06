@@ -65,13 +65,13 @@ public class Producto implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaIngreso;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
-    private List<Detalleentrada> detalleentradaList;
+    private List<DetalleEntrada> detalleentradaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
-    private List<Detallesolicitud> detallesolicitudList;
+    private List<DetalleSolicitud> detallesolicitudList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<Inventario> inventarioList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
-    private List<Detallesalida> detallesalidadList;
+    private List<DetalleSalida> detallesalidadList;
     @JoinColumn(name = "idCategoria", referencedColumnName = "idCategoria", nullable = false)
     @ManyToOne(optional = false)
     private Categoria idCategoria;
@@ -79,7 +79,7 @@ public class Producto implements Serializable {
     @ManyToOne(optional = false)
     private Proveedor idProveedor;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
-    private List<Detalleventa> detalleventaList;
+    private List<DetalleVenta> detalleventaList;
 
     public Producto() {
     }
@@ -145,20 +145,20 @@ public class Producto implements Serializable {
     }
 
     @XmlTransient
-    public List<Detalleentrada> getDetalleentradaList() {
+    public List<DetalleEntrada> getDetalleentradaList() {
         return detalleentradaList;
     }
 
-    public void setDetalleentradaList(List<Detalleentrada> detalleentradaList) {
+    public void setDetalleentradaList(List<DetalleEntrada> detalleentradaList) {
         this.detalleentradaList = detalleentradaList;
     }
 
     @XmlTransient
-    public List<Detallesolicitud> getDetallesolicitudList() {
+    public List<DetalleSolicitud> getDetallesolicitudList() {
         return detallesolicitudList;
     }
 
-    public void setDetallesolicitudList(List<Detallesolicitud> detallesolicitudList) {
+    public void setDetallesolicitudList(List<DetalleSolicitud> detallesolicitudList) {
         this.detallesolicitudList = detallesolicitudList;
     }
 
@@ -172,11 +172,11 @@ public class Producto implements Serializable {
     }
 
     @XmlTransient
-    public List<Detallesalida> getDetallesalidadList() {
+    public List<DetalleSalida> getDetallesalidadList() {
         return detallesalidadList;
     }
 
-    public void setDetallesalidadList(List<Detallesalida> detallesalidadList) {
+    public void setDetallesalidadList(List<DetalleSalida> detallesalidadList) {
         this.detallesalidadList = detallesalidadList;
     }
 
@@ -197,11 +197,11 @@ public class Producto implements Serializable {
     }
 
     @XmlTransient
-    public List<Detalleventa> getDetalleventaList() {
+    public List<DetalleVenta> getDetalleventaList() {
         return detalleventaList;
     }
 
-    public void setDetalleventaList(List<Detalleventa> detalleventaList) {
+    public void setDetalleventaList(List<DetalleVenta> detalleventaList) {
         this.detalleventaList = detalleventaList;
     }
 
